@@ -62,44 +62,33 @@
             <p class="titulo3"> <img src="img/cadastro_icon.svg" alt="" > IDENTIFICAÇÃO</p>
         </div>
         <div class="menu-cadastro-login">
-            <div class="ja-cadastrado">
+            <form class="ja-cadastrado">
                 <a class="titulo-central">JÁ TENHO CADASTRO</a>
-                <div>
-                    <input type="text" value placeholder="E-mail, CPF ou CNPJ">
-                </div>
-                <div>
-                    <input type="password" value placeholder="Senha" maxlength="8" size="35">
-                </div>
-                <div>
-                    <button class="botao-entrar"> <img src="img/entrar_branco.png" alt=""> entrar</button>
-                </div>
-                <nav class="esqueci-menu">
-                    <a href="#">Esqueci meu login</a>
-                    <a href="#">Esqueci minha senha</a>
-                </nav>
-            </div>
-            <div class="me-cadastrar">
+                <form>
+                    <input type="text" placeholder="E-mail, CPF ou CNPJ" id="login">
+                    <input type="password" placeholder="Senha" maxlength="8" size="35" id="senha">
+                    <button class="botao-entrar" onclick="logar(); return false"> <img src="img/entrar_branco.png" > Entrar</button>
+                    <nav class="esqueci-menu">
+                        <a href="#">Esqueci meu login</a>
+                        <a href="#">Esqueci minha senha</a>
+                    </nav>
+                </form>
+            </form>
+            <form class="me-cadastrar">
                 <a class="titulo-central">QUERO ME CADASTRAR</a>
-                <div>
-                    <input type="email" value placeholder="E-mail">
-                </div>
-                <div>
-                    <input type="password" value placeholder="Criar sua senha">
-                </div>
-                <div>
-                    <input type="password" value placeholder="Confirme a senha">
-                </div>
-                <div>
-                    <input type="text" value placeholder="CPF ou CNPJ">
-                </div>
-                <div>
-                    <input type="text" value placeholder="CEP">
-                </div>
-                <div>
-                    <button class="botao-cadastro"><img src="img/cadastro_branco.png" alt=""> CADASTRAR</button>
-                </div>
-            </div>
+                <form class="formCadastro" name="formCadastro" method="post" action="">
+                    <input type="text" placeholder="Nome" id="nome">
+                    <input type="text" placeholder="CPF ou CNPJ" id="criarLogin">
+                    <input type="email" placeholder="E-mail" id="email">
+                    <input type="tel" placeholder="Telefone" id="phone">
+                    <input type="password" placeholder="Senha" maxlength="8" size="35" id="criarSenha">
+                    <input type="password" placeholder="Confirmar Senha" maxlength="8" size="35" id="confirmarsenha">
+                    <button class="botao-cadastro" onclick="cadastroLogin(); return false" ><img src="img/cadastro_branco.png"> CADASTRAR</button>
+                </form>
+            </form>
         </div>
+
+        
         <div>
             <section class="line-rodape" ></section>
         </div>
@@ -127,7 +116,7 @@
         </div>
     </div>
     
-    
+    <script src="js/script.js"></script>
     
 </body>
 </html>
